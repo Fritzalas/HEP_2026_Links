@@ -29,6 +29,14 @@
             color:#111;
         }
 
+        @media (max-width: 768px) {
+            body {
+                background:
+                        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)),
+                        url("HEP2026_background.svg") center/contain no-repeat;
+            }
+        }
+
         /* Glass container */
 
         .container{
@@ -37,15 +45,23 @@
 
             border-radius:18px;
 
-            background:rgba(255,255,255,0.85);
+            background: rgba(255,255,255,0.55); /* semi-transparent */
             backdrop-filter: blur(12px);
 
-            box-shadow:
-                    0 20px 50px rgba(0,0,0,0.25);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.25);
 
             text-align:center;
 
             animation:fadeIn 0.8s ease;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                background: rgba(255,255,255,0.25); /* more solid */
+                backdrop-filter: blur(12px); /* can keep blur same */
+                padding: 35px; /* optional: reduce padding for smaller screens */
+                width: 90%; /* make it fit mobile better */
+            }
         }
 
         /* Header */
