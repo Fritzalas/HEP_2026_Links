@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HEP 2026 Link Portal</title>
+
+    <style>
+
+        *{
+            box-sizing:border-box;
+        }
+
+        body{
+            margin:0;
+            height:100vh;
+
+            background:
+                    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+                    url("HEP2026_background.svg") center/cover no-repeat;
+
+            font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            color:#111;
+        }
+
+        /* Glass container */
+
+        .container{
+            width:440px;
+            padding:45px;
+
+            border-radius:18px;
+
+            background:rgba(255,255,255,0.85);
+            backdrop-filter: blur(12px);
+
+            box-shadow:
+                    0 20px 50px rgba(0,0,0,0.25);
+
+            text-align:center;
+
+            animation:fadeIn 0.8s ease;
+        }
+
+        /* Header */
+
+        .profile h1{
+            margin:0;
+            font-size:30px;
+            font-weight:700;
+            letter-spacing:0.5px;
+        }
+
+        .profile p{
+            margin-top:10px;
+            font-size:15px;
+            color:#555;
+            line-height:1.5;
+        }
+
+        /* Links */
+
+        .links{
+            margin-top:35px;
+        }
+
+        .link{
+            display:block;
+
+            text-decoration:none;
+
+            margin:14px 0;
+            padding:16px;
+
+            border-radius:10px;
+
+            font-size:15px;
+            font-weight:500;
+
+            color:#1a1a1a;
+
+            background:#f6f8fb;
+
+            border:1px solid #e1e6ee;
+
+            transition:all 0.25s ease;
+        }
+
+        /* Hover effect */
+
+        .link:hover{
+            transform:translateY(-3px);
+
+            background:linear-gradient(135deg,#4c7dff,#6fa6ff);
+
+            color:white;
+
+            border-color:transparent;
+
+            box-shadow:0 8px 20px rgba(76,125,255,0.35);
+        }
+
+        /* Footer */
+
+        footer{
+            margin-top:35px;
+            font-size:12px;
+            color:#666;
+        }
+
+        /* Animation */
+
+        @keyframes fadeIn{
+            from{
+                opacity:0;
+                transform:translateY(20px);
+            }
+            to{
+                opacity:1;
+                transform:translateY(0);
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="profile">
+        <h1>HEP 2026</h1>
+        <p>
+            A curated collection of external resources and references for the HEP 2026 project.
+        </p>
+    </div>
+
+    <div class="links">
+
+        <a class="link" href="https://physics.ntua.gr/~ntrac/HEP_2026/" target="_blank">
+            HEP Website
+        </a>
+
+        <a class="link" href="https://indico.cern.ch/event/1654737/registrations/126569/" target="_blank">
+            Registration
+        </a>
+
+        <a class="link" href="https://indico.cern.ch/event/1654737/page/41746-overview" target="_blank">
+            Indico Link
+        </a>
+
+        <a class="link" href="https://eesfye.gr/" target="_blank">
+            HESSHEP
+        </a>
+
+        <a class="link" href="https://ntua.gr/en/" target="_blank">
+            NTUA
+        </a>
+
+    </div>
+
+    <footer>
+        Last Updated: <span id="date"></span>
+    </footer>
+
+</div>
+
+<script>
+    const today = new Date();
+    document.getElementById("date").textContent =
+        today.toLocaleDateString();
+</script>
+
+</body>
+</html>
