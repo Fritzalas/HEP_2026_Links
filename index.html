@@ -41,15 +41,8 @@
 
             border-radius:18px;
 
-            background: rgba(255,255,255,0.5);
-            backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
-
-            box-shadow: 0 20px 50px rgba(0,0,0,0.25);
-
             text-align:center;
 
-            animation:fadeIn 0.8s ease;
         }
 
         /* Header */
@@ -151,13 +144,6 @@
 
 <div class="container">
 
-    <div class="profile">
-        <h1>HEP 2026</h1>
-        <p>
-            A curated collection of external resources and references for the HEP 2026 project.
-        </p>
-    </div>
-
     <div class="links">
 
         <a class="link" href="https://physics.ntua.gr/~ntrac/HEP_2026/" target="_blank">
@@ -182,17 +168,7 @@
 
     </div>
 
-    <footer>
-        Last Updated: <span id="date"></span>
-    </footer>
-
 </div>
-
-<script>
-    const today = new Date();
-    document.getElementById("date").textContent =
-        today.toLocaleDateString();
-</script>
 
 </body>
 </html>
