@@ -43,6 +43,10 @@
 
             text-align:center;
 
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+            min-height:60vh; /* key for spacing */
         }
 
         /* Header */
@@ -65,13 +69,15 @@
 
         .links{
             margin-top:30px;
+            display:flex;
+            flex-direction:column;
+            gap:16px;
         }
 
         .link{
             display:block;
             text-decoration:none;
 
-            margin:12px 0;
             padding:clamp(14px, 3.5vw, 16px);
 
             border-radius:12px;
@@ -128,11 +134,12 @@
 
         @media (max-width: 480px) {
             body{
-                align-items:flex-start;
+                align-items:center; /* keep vertical centering */
+                padding:20px;
             }
 
             .container{
-                margin-top:20px;
+                margin-top:0; /* remove extra top margin */
                 border-radius:14px;
             }
         }
