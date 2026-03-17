@@ -133,14 +133,22 @@
         /* Small screens tweaks */
 
         @media (max-width: 480px) {
-            body{
-                align-items:center; /* keep vertical centering */
-                padding:20px;
+            html, body {
+                height: 100%; /* make body fill full viewport height */
             }
 
-            .container{
-                margin-top:0; /* remove extra top margin */
-                border-radius:14px;
+            body {
+                display: flex;
+                justify-content: center; /* horizontal centering */
+                align-items: center;     /* vertical centering */
+                padding: 20px;
+            }
+
+            .container {
+                margin-top: 0;   /* remove extra top margin */
+                border-radius: 14px;
+                width: 100%;
+                max-width: 480px;
             }
         }
 
